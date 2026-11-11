@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscador Padrón Electoral - Cenur Este</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="background-decor"></div>
+  
+  <main class="container">
+    <header class="header">
+      <div class="badge">Elecciones Universitarias 2026</div>
+      <h1>Consulta de Lugar de Votación</h1>
+      <p class="subtitle">Padrón de Egresados &bull; Cenur Este &bull; Universidad de la República</p>
+    </header>
+
+    <section class="card search-card">
+      <label for="ciInput" class="input-label">Ingresa tu Cédula de Identidad</label>
+      <div class="input-group">
+        <span class="input-icon">🔍</span>
+        <input 
+          type="text" 
+          id="ciInput" 
+          placeholder="Ej: 4.824.991-1 o 48249911" 
+          autocomplete="off" 
+          autofocus
+        >
+        <button id="clearBtn" class="clear-btn" title="Borrar" aria-label="Borrar">&times;</button>
+        <button id="searchBtn" class="primary-btn">Consultar</button>
+      </div>
+      <p class="input-hint">Puedes escribir con o sin puntos y guión. Búsqueda instantánea.</p>
+    </section>
+
+    <!-- Resultado dinámico -->
+    <section id="resultArea" class="result-area hidden"></section>
+
+    <!-- Información adicional y estadísticas -->
+    <footer class="footer-info">
+      <div class="stats-box">
+        <div class="stat-item">
+          <span class="stat-number">4.524</span>
+          <span class="stat-desc">Egresados Habilitados</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-number">100%</span>
+          <span class="stat-desc">Rápido y Seguro</span>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="datos_padron.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
